@@ -19,59 +19,16 @@
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<link rel="stylesheet" type="text/css" href="lib/css/jquery-ui-1.10.3.custom.min.css">
-		<link href="lib/css/bootstrap-combined.min.css" rel="stylesheet">	
-
+			
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	
 		<style>
-			body, h1,h2,h3,p {
+			body, h1,h2,h3, h4, p {
 				font-family: 'Open Sans', sans-serif !important;
-			}		
-			#mask{
-	background-color:#fff;
-	width: 1280px;
-	height: 720px;
-	margin:20px auto;
-	display: block;
-	overflow: hidden;
-}
-
-#stage{
-	width:100%;
-	height:100%;
-	margin:0;
-	display: block;
-	overflow: hidden;
-	position: relative;
-}
-
-.actor{
-	position: absolute;
-}
-
-img{
-	z-index: 200;
-}
-
-#canvasWrapper{
-	z-index: 100;
-}
-
-#stageCanvas { 
-	width:1280px;
-	height:720px;
-	opacity: .3;
-}
-
-#images img{
-	width:100%;
-}
-
-h1{
-	color: #fff;
-	text-align: center;
-}
+			}
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+        text-transform: none !important;
+      }		
 		</style>
 
 		
@@ -80,11 +37,6 @@ h1{
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
-		<script src="lib/js/jquery-2.0.2.min.js"></script>
-		<script src="lib/js/jquery-ui.min.js"></script>
-
-		
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -92,295 +44,150 @@ h1{
 
 	<body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-    <section>
-        <h1>
-
-<p class="p1">
-        <span class="s1" style="font-weight: normal;">
-            <br>
-        </span>
-    </p>
-    <p class="p1">
-        <span class="s1" style="font-weight: normal;">Wave Pool</span>
-    </p>
-    <h2>
-        <span class="s1">
-
-
-
-
-
-
-
-<h3>
-        <span class="s1">
-            <br>
-        </span>
-    </h3>
-    <h3>
-        <span class="s1" style="font-weight: normal;">Wave Pool is an interactive learning experience that uses gestures as a tool to understand the physics of sound.</span>
-    </h3>
-    <div>
-        <span class="s1">
-            <br>
-        </span>
-    </div>
-    <div>
-        <span class="s1">
-            <br>
-        </span>
-    </div>
-    <div>
-
-
-
-
-
-
-
-<h3>
-    <span class="s1" style="font-weight: normal;">
-        <font style="font-size: 24px;">By:&nbsp; Katherine Bennett, Ibrahim Ekin, Gabe Liberti, Dave Rife, and Kevin Siwoff</font>
-    </span>
-</h3>
-</div>
-</span>
-</h2>
-</h1>
-</section>
-<section>
-    <h2 style="font-style: normal; font-variant: normal; text-align: left;">
-        <span class="s1">
-            <br>
-        </span>
-    </h2>
-    <h2 style="font-style: normal; font-variant: normal; text-align: left;">
-        <span class="s1">
-            <br>
-        </span>
-    </h2>
-    <h2 style="font-style: normal; font-variant: normal; text-align: left;">
-        <span class="s1">
-            <br>
-        </span>
-    </h2>
-    <h2 style="font-style: normal; font-variant: normal; text-align: left;">
-        <span class="s1">How might we&nbsp;</span>
-        <span class="s2">engage</span>
-        <span class="s1">&nbsp;students using&nbsp;</span>
-        <span class="s3">embodied learning</span>
-        <span class="s1">&nbsp;to&nbsp;</span>
-        <span class="s4">inspire</span>
-        <span class="s1">&nbsp;creative inquiry in the classroom?</span>
-    </h2>
-</section>
-<section>
-    <h2 style="font-style: normal; font-variant: normal;">
-    </h2>
-    <h2>
-        <span class="s1">
-            <br class="Apple-interchange-newline">
-            <br>
-        </span>
-    </h2>
-    <h2>
-        <span class="s1">
-            <br>
-        </span>
-    </h2>
-    <h2>
-        <span class="s1">Our focus is on&nbsp;<br>
-        </span>
-        <span class="s1">middle school - high school&nbsp;<br>
-        </span>
-        <span class="s1">students</span>
-    </h2>
-</section>
-<section>
-    <h2 class="fragment" data-fragment-index="0" style="font-style: normal; font-variant: normal;">
-    </h2>
-    <h1>
-        <span class="s1" style="font-weight: normal;">
-            <font color="#f8f6f6">Our tools:</font>
-        </span>
-    </h1>
-    <h2>
-        <div>
-            <span class="s1">
-                <font color="#f8f6f6">
-                    <br>
-                </font>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+    
+        <section>
+          <h1>
+            <p class="p1">
+              <span class="s1" style="font-weight: normal;">Wave Pool</span>
+            </p>
+          </h1>
+          <h3>
+            <span class="s1" style="font-weight: normal;">Wave Pool is an interactive learning experience that uses gestures as a tool to understand the physics of sound.
             </span>
-        </div>
-        <div>
+          </h3>
+          <div>
+            <h4>
+              <span class="s1" style="font-weight: normal;font-size: 24px;">Created at the Edesign Lab Hackathon 2013 by: Katherine Bennett, Ibrahim Ekin, Gabe Liberti, Dave Rife, and Kevin Siwoff
+              </span>
+            </h4>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="font-style: normal; font-variant: normal; text-align: left;">
+            <span class="s1">How might we engage students using embodied learning to inspire creative inquiry in the classroom?</span>
+          </h2>
+        </section>
+
+        <section>
+          <h2>
+            <span class="s1">Our focus is on middle school - high school students</span>
+          </h2>
+        </section>
+  
+        <section>
+          <h1>
+            <span class="s1" style="font-weight: normal;">Our tools:</span>
+          </h1>
+          <div>
             <span class="s1">
-                <font color="#f8f6f6">
-                    <ul class="ul1">
-                        <font style="font-size: 54px;">
-                            <ul>
-                                <li class="li1 fragment" data-fragment-index="1">
-                                    <span class="s1">
-                                    </span>
-                                    <span class="s2">XBox Kinect</span>
-                                </li>
-                                <li class="li1 fragment" data-fragment-index="2">
-                                    <span class="s1">
-                                    </span>
-                                    <span class="s2">Hand/Skeleton tracking software (OpenNI library for C++)</span>
-                                </li>
-                                <li class="li1 fragment" data-fragment-index="3">
-                                    <span class="s1">
-                                    </span>
-                                    <span class="s2">Max/MSP</span>
-                                </li>
-                                <li class="li1 fragment" data-fragment-index="4">
-                                    <span class="s1">
-                                    </span>
-                                    <span class="s2">HTML5/Javascript</span>
-                                </li>
-                            </ul>
-                        </font>
-                        </ul>&nbsp; &nbsp;</font>
-                    </span>
+              <ul class="ul1">
+                <li class="li1 fragment" data-fragment-index="1">
+                  <span class="s2">XBox Kinect</span>
+                </li>
+                <li class="li1 fragment" data-fragment-index="2">
+                  <span class="s2">Hand/Skeleton tracking software (OpenNI library for C++)</span>
+                </li>
+                <li class="li1 fragment" data-fragment-index="3">
+                  <span class="s2">Max/MSP</span>
+                </li>
+                <li class="li1 fragment" data-fragment-index="4">
+                  <span class="s2">HTML5/Javascript</span>
+                </li>
+              </ul>
+            </div>
+        </section>
+    
+        <section>
+          <section>
+            <h2 style="font-style: normal; font-variant: normal;">
+              <span class="s1">Learning example:</span>
+            </h2>
+            <h1>
+              <span class="s1">The wavelengths of sound</span>
+            </h1>
+            <h3>(An HTML5 demo)</h3>
+          </section>
+
+          <section>
+          <!--Insert Sound demo iFrame here -->
+            <iframe src="plugin/WebAudioApi/index.html" frameborder="0" width="900" height="600"></iframe>
+          </section>
+
+          <section>
+            <h2>
+              <span style="font-weight: normal;">WavePool gesture interface demo</span>
+            </h2>
+            <iframe width="853" height="480" src="http://www.youtube.com/embed/wQQn6EE_J-k" frameborder="0" allowfullscreen=""></iframe>
+          </section>
+        </section>
+
+        <section>
+
+          <section>
+            <h1>Future iterations</h1>
+          </section>
+        
+          <section>
+            <h2 style="font-style: normal; font-size: 42px; font-weight: normal;">Collaboration, Synthesis, Participation</h2>
+        
+            <h2>
+              <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/kevinsiwoff/images/22217/photo_1.png" style="font-size: 30.55947494506836px; font-style: normal; font-variant: normal; width: 387px;">
+                <span style="font-size: 30.55947494506836px; font-style: normal; font-variant: normal;">&nbsp;</span>
+                <div style="font-size: 30.55947494506836px; font-style: normal; font-variant: normal;">
+                  <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/kevinsiwoff/images/22219/photo_2.png" style="width: 274px;">&nbsp;<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/kevinsiwoff/images/22220/photo_3.png" style="height: 273px;">
                 </div>
             </h2>
+          </section>
         </section>
+    
         <section>
-            <section>
-                <h2 style="font-style: normal; font-variant: normal;">
-                    <p class="p1">
-                        <span class="s1">Learning example:&nbsp;</span>
-                    </p>
-                </h2>
-                <h1>
-                    <span class="s1">
-                        <br>
-                    </span>
-                </h1>
-                <h1>
-                    <span class="s1">The wavelengths of sound</span>
-                </h1>
-            </section>
-            <section>
-                <div id="slider-alpha"></div>
-								<h1>Sound Waves: Move the slider to see the relationship between frequency and wavelength</h1>
-								<div id="mask">
-									<div id="stage">
-										<div id="canvasWrapper" class="actor">
-											<canvas id="stageCanvas"></canvas>
-										</div>
-										<img class="actor" src="human.png" style="left:800px; top:100px;" />
-									</div>
-								</div>
+          <h1>
+            <span style="font-weight: normal;">Open Source</span>
+          </h1>
+          <div>
+            <span>Get the source code on <a href="https://github.com/LadyK/wavePool">GitHub</a></span> 
+          </div>
+        </section>
 
-								<h1>...</h1>
+      </div>
+    </div>
+  
 
-								<div style="width:1280px; margin:0 auto;">
-								<div id="images" class="row-fluid">
-									<div class="anImage span4" data-startFrequency="200" data-endFrequency="4000" data-active="false">
-										<img  src="people.jpg" />
-									</div>
-									<div class="anImage span4" data-startFrequency="2000" data-endFrequency="5000" data-active="false">
-										<img  src="cricket.jpg" />
-									</div>
-									<div class="anImage span4" data-startFrequency="10000" data-endFrequency="120000" data-active="false">
-										<img  src="bat.jpg" />
-									</div>
-									<div class="anImage span4" data-startFrequency="10" data-endFrequency="40000" data-active="false">
-										<img  src="whale.jpg" />
-									</div>
-									<div class="anImage span4" data-startFrequency="100" data-endFrequency="100000" data-active="false">
-										<img  src="dolphin.jpg" />
-									</div>
-								</div>
-								</div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
 
-            </section>
-            <section>
-                <h2>
-                    <span style="font-weight: normal;">WavePool gesture interface demo</span>
-                    </h2>
-<iframe width="853" height="480" src="http://www.youtube.com/embed/wQQn6EE_J-k" frameborder="0" allowfullscreen="">&amp;nbsp;</iframe>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <h1>
-                        <br>
-                    </h1>
-                    <h1>
-                        <br>
-                    </h1>
-                    <h1>Future iterations</h1>
-                </section>
-                <section>
-                    <h2 style="font-style: normal; font-variant: normal;">
-                        <font style="font-size: 42px; font-weight: normal;">Collaboration, Synthesis, Participation</font>
-                    </h2>
-                    <h2>
-                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/kevinsiwoff/images/22217/photo_1.png" style="font-size: 30.55947494506836px; font-style: normal; font-variant: normal; width: 387px;">
-                        <span style="font-size: 30.55947494506836px; font-style: normal; font-variant: normal;">&nbsp;</span>
-                        <div style="font-size: 30.55947494506836px; font-style: normal; font-variant: normal;">
-                            <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/kevinsiwoff/images/22219/photo_2.png" style="width: 274px;">&nbsp;<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/kevinsiwoff/images/22220/photo_3.png" style="height: 273px;">
-                        </div>
-                    </h2>
-                </section>
-            </section>
-            <section>
-                <h2>
-                    <br>
-                </h2>
-                <h2>
-                    <br>
-                </h2>
-                <h2>
-                    <br>
-                </h2>
-                <h1>
-                    <span style="font-weight: normal;">Open Source</span>
-                </h1>
-                <div>
-                    <br>
-                </div>
-                <div>Check out the source code on GitHub</div>
-			</div>
+    <script>
 
-		</div>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-		<script>
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+    });
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
+    </script>
 
 	</body>
 </html>
