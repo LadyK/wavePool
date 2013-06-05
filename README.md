@@ -1,4 +1,4 @@
-Wave Pool is an interactive application that teaches students about wave lengths, frequencies and amplitude through gesture and sound. In our demo here, we created an experience where students learn how the length of a wave defines its frequency. By changing the distance between their hands, and in turn the wavelength, the frequency that they hear changes.
+## Wave Pool is an interactive application that teaches students about wave lengths, frequencies and amplitude through gesture and sound. In our demo here, we created an experience where students learn how the length of a wave defines its frequency. By changing the distance between their hands, and in turn the wavelength, the frequency that they hear changes.
 
 
 Future iterations will incorporate the following:
@@ -10,7 +10,7 @@ Future iterations will incorporate the following:
     - Melodies: Using number theory and distance, students can experiment with pitches along the 12 tone scale to create melodies. 
 
 
-Created by Katherine Bennett, Dave Prife, Gabe Liberti, Kevin Siwoff, Ibrahim Ekin at the EDesign Lab's Hackathon for National Civic Hacking Day
+Created by Katherine Bennett, Dave Rife, Gabe Liberti, Kevin Siwoff, Ibrahim Ekin at the EDesign Lab's Hackathon for National Civic Hacking Day
 
 June 2013
 

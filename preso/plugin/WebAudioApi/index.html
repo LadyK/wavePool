@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="jquery-2.0.2.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.min.css">
+	<link href="bootstrap-combined.min.css" rel="stylesheet">
+	<script type="text/javascript">
+
+
+	var width = 1280;
+	var height = 720;
+
+	$(document).ready(function(){
+
+
+		// $('#mask').css("width",width).css("height",height);
+	var context;
+	var oscillators = [];
+	window.addEventListener('load', init, false);
+
+	function addOscillator(id, frequency){
+		var oscillator; 
+		oscillator = context.createOscillator(); 
+		oscillator.connect(context.destination);
+		oscillator.frequency.value=frequency;
+		oscillator.start(0);
+		oscillators[id] = oscillator; 
+	}
+
+	function changeOscillator(id, frequency){
+		oscillators[id].frequency.value=frequency;
+	}
+
+	function removeOscillator(id){
+		oscillators[id].stop(0);
+		oscillators[id]=null;
+	}
+
+	function init() {
+	  	try {
+	    window.AudioContext = window.AudioContext||window.webkitAudioContext;
+	    context = new AudioContext();
+	    
+	    addOscillator('alpha',0);
+	    addOscillator('beta',0);
+	    }
+	  	catch(e) {
+	    	alert('Web Audio API is not supported in this browser');
+	  	}
+	}
+
+	$( "#slider-alpha" ).slider({
+		min:0,
+		max:40000,
+		value:0,
+		slide: function( event, ui ) {
+			changeOscillator('alpha',ui.value);
+		}
+	});
+
+	var c=document.getElementById("stageCanvas");
+	var ctx=c.getContext("2d");
+	ctx.lineWidth = .5;
+
+	var frequency = 0;
+
+	$('.anImage').hide();
+
+	function everyFrame(){
+	
+	frequency = $('#slider-alpha').slider("value");
+	var waveLength = 343/frequency;
+	var pixelsPerMeter = 150;
+	var pixelsPerCycle = pixelsPerMeter * waveLength;
+	var degreePerPixel = 360.0 / pixelsPerCycle;
+	//console.log(pixelsPerCycle);
+	
+	
+	ctx.fillStyle = 'rgba(255, 255, 255, .1)';
+	ctx.clearRect (0, 0, width, height);
+	var sinePrev = 0;
+	for (var i=0; i<width;i++){
+		var theta = degreePerPixel * i;
+		ctx.beginPath();
+		ctx.moveTo(i,0);
+      	ctx.lineTo(i,height);
+		ctx.closePath();
+		var sine = Math.sin(theta*Math.PI/180.0);
+		var alpha = 0.5+0.5*sine;
+		ctx.strokeStyle = 'rgba(0, 0, 0, '+alpha+')';
+		ctx.stroke();
+
+
+		ctx.beginPath();
+		ctx.moveTo(i,20+10*sine);
+      	ctx.lineTo(i-1,20+10*sinePrev);
+		ctx.closePath();
+		ctx.strokeStyle = 'rgba(0, 0, 0, 1)';
+		ctx.stroke();
+		sinePrev = sine;
+	}
+
+
+	var actorsToShow = $('.anImage[data-active="false"]').filter(function (index) {
+				return frequency > $(this).attr('data-startFrequency') && frequency < $(this).attr('data-endFrequency');
+			});
+			actorsToShow.attr('data-active','true').css('opacity','0.01').show().animate({opacity:'1'},500);
+
+			var actorsToHide = $('.anImage[data-active="true"]').filter(function (index) {
+				return frequency < $(this).attr('data-startFrequency') || frequency > $(this).attr('data-endFrequency');
+			});
+			actorsToHide.attr('data-active','false').animate({opacity:'0'},250,function(){$(this).hide();});	
+
+
+	}
+	setInterval(everyFrame,100);
+	
+
+
+});
+	</script>
+
+
+<style>
+body{
+	background-color:#000;
+}
+
+#mask{
+	background-color:#fff;
+	width: 100%;
+	height: 200px;
+	margin:20px auto;
+	display: block;
+	overflow: hidden;
+}
+
+#stage{
+	width:100%;
+	height:100%;
+	margin:0;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.actor{
+	position: absolute;
+}
+
+img{
+	z-index: 200;
+}
+
+#canvasWrapper{
+	z-index: 100;
+	width: 100%;
+}
+
+#stageCanvas { 
+	width:100%;
+	height:200px;
+	opacity: .3;
+}
+
+#images img{
+	width:100%;
+}
+
+h1{
+	color: #fff;
+	text-align: center;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="container-fluid">
+	<h1>Drag the slider to see the relationship between wavelength & pitch</h1>
+	<div id="slider-alpha"></div>
+	<div id="mask">
+		<div id="stage">
+			<div id="canvasWrapper" class="actor">
+				<canvas id="stageCanvas"></canvas>
+			</div>
+			<img class="actor" src="human.png" style="left:800px; top:100px;" />
+		</div>
+	</div>
+	<h1>...</h1>
+	<div id="images" class="row-fluid">
+			<div class="anImage span4" data-startFrequency="200" data-endFrequency="4000" data-active="false">
+				<img  src="people.jpg" />
+			</div>
+			<div class="anImage span4" data-startFrequency="2000" data-endFrequency="5000" data-active="false">
+				<img  src="cricket.jpg" />
+			</div>
+			<div class="anImage span4" data-startFrequency="10000" data-endFrequency="120000" data-active="false">
+				<img  src="bat.jpg" />
+			</div>
+			<div class="anImage span4" data-startFrequency="10" data-endFrequency="40000" data-active="false">
+				<img  src="whale.jpg" />
+			</div>
+			<div class="anImage span4" data-startFrequency="100" data-endFrequency="100000" data-active="false">
+				<img  src="dolphin.jpg" />
+			</div>	
+	</div>
+</div>
+</body>
+</html>
